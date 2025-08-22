@@ -1,0 +1,6 @@
+/* Removed Tailwind directives due to unknown at-rule error */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can be added below */
