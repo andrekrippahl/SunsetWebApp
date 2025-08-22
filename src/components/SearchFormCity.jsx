@@ -43,13 +43,6 @@ export default function SearchFormCity({ onSubmit }) {
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)}
       />
-      <input
-        type="text"
-        className={`sm:col-span-2 ${inputCls}`}
-        value={tz}
-        onChange={(e) => setTz(e.target.value)}
-        placeholder="Europe/Lisbon"
-      />
       <button
         type="submit"
         disabled={disabled}
