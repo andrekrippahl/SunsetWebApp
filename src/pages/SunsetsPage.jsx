@@ -2,6 +2,8 @@
 import { useState } from "react";
 import SearchFormCity from "../components/SearchFormCity.jsx";
 import RangeCard from "../components/RangeCard.jsx";
+import StreamRangeCard from "../components/StreamRangeCard.jsx";
+
 
 export default function SunsetsPage() {
   const [cards, setCards] = useState([]);

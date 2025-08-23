@@ -42,6 +42,7 @@ export default function SearchFormCity({ onSubmit }) {
         className={inputCls}
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)}
+        min={startDate}
       />
       <button
         type="submit"

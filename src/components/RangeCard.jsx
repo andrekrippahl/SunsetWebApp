@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getSunTimesRange } from "../lib/api.js";
 import SunChart from "./SunChart.jsx";
 import SunTable from "./SunTable.jsx";
+import ErrorCard from "./ErrorCard.jsx";
 
 export default function RangeCard({ city, startDate, endDate, tz }) {
   const [rows, setRows] = useState([]);
@@ -34,7 +35,7 @@ export default function RangeCard({ city, startDate, endDate, tz }) {
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-4">
         <div className="font-semibold">
-          {meta.city || city} — {startDate} → {endDate} ({meta.timezone || tz})
+          {meta.city || city} : {startDate} → {endDate}
         </div>
 
         {/* Switch */}
@@ -67,12 +68,9 @@ export default function RangeCard({ city, startDate, endDate, tz }) {
       </div>
 
       {/* States */}
-      {loading && <div className="text-sm text-neutral-500 dark:text-neutral-400">A carregar…</div>}
-      {err && (
-        <pre className="text-sm text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/30 p-3 rounded-lg overflow-auto">
-          {JSON.stringify(err.body || err.message, null, 2)}
-        </pre>
-      )}
+      {loading && <div className="text-sm text-neutral-500 dark:text-neutral-400">Loading...</div>}
+      {err && <ErrorCard error={err.body || err} />}
+
       {!loading && !err && rows.length === 0 && (
         <div className="text-sm text-neutral-600 dark:text-neutral-300">Sem dados para este intervalo.</div>
       )}
