@@ -61,11 +61,6 @@ export default function ErrorCard({ error, onRetry, onEdit, className = "" }) {
             </div>
           )}
         </div>
-
-        {/* Small badge with code/status (dev aid) */}
-        <div className="text-[10px] uppercase tracking-wide opacity-60 ml-2">
-          {e.code}{e.http_status ? ` · ${e.http_status}` : ""}
-        </div>
       </div>
     </div>
   );

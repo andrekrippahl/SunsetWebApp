@@ -35,10 +35,10 @@ npm install
 
 Create .env.local in the project root:
 ```bash
-# Base URL of your backend API (no trailing slash)
+
 VITE_API_BASE_URL=http://localhost:3000
 
-# Sunset endpoint path (if you changed it in the API)
+
 VITE_API_SUNSET_PATH=/sunsets
 ```
 

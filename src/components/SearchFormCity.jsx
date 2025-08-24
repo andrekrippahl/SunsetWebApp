@@ -49,7 +49,7 @@ export default function SearchFormCity({ onSubmit }) {
         disabled={disabled}
         className="sm:col-span-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white py-2 disabled:opacity-50"
       >
-        Pesquisar
+        Search
       </button>
     </form>
   );

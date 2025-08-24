@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <h1 className="text-lg font-bold">🌅 Sunset API</h1>
+        <h1 className="text-lg font-bold">Sunset API</h1>
         <label className="flex items-center gap-2 cursor-pointer">
           <span className="text-sm text-neutral-700 dark:text-neutral-300">Dark Mode</span>
           <div className="relative">

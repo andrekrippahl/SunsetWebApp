@@ -14,7 +14,7 @@ async function fetchJson(url, options = {}) {
 function toLocalHHMM(iso, tz) {
   if (!iso) return null;
   const d = new Date(iso);
-  // en-GB → HH:mm de 00–23
+
   return d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: tz || "UTC" });
 }
 
@@ -24,7 +24,7 @@ function splitGoldenHour(s) {
   return { start: a, end: b };
 }
 
-// ✅ chamada usada pelos componentes
+//chamada usada pelos componentes
 export async function getSunTimesRange({ city, startDate, endDate, tz }) {
   const u = new URL(`${BASE_URL}${ENDPOINT}`);
   if (city)      u.searchParams.set("location", city);
@@ -34,7 +34,6 @@ export async function getSunTimesRange({ city, startDate, endDate, tz }) {
 
   const data = await fetchJson(u.toString());
 
-  // A API pode devolver array simples: [{ date, sunrise, sunset, golden_hour, ... }]
   const rows = Array.isArray(data) ? data : (Array.isArray(data?.days) ? data.days : []);
 
   const days = rows.map(d => {
