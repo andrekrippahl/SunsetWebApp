@@ -48,3 +48,12 @@ VITE_API_SUNSET_PATH=/sunsets
 npm run dev
 ```
 
+---
+
+### How to Use
+
+- Enter city (e.g., “Lisbon”) and a date range.
+- Click Pesquisar to create a result card.
+- Toggle between Tabela and Gráfico inside the card.
+- Use the dark-mode switch in the header to switch themes.
+- (Optional) Use the streaming version (StreamRangeCard) to see the table fill in live.
